@@ -6,7 +6,7 @@ It showcases a modern marketing layout with hero section, features, and product 
 ---
 
 ## 🚀 Live Demo
-[Add your link here]
+https://19iars.github.io/ai-landing-page/
 
 ---
 
