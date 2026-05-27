@@ -45,18 +45,6 @@ ai-landing-page/
 
 ---
 
-## ▶️ How to run
-Open `index.html` in your browser (no build step required). For local development with live reload, run a simple static server:
-
-```bash
-# Python 3
-python3 -m http.server 8000
-
-# then open http://localhost:8000
-```
-
----
-
 ## 🔧 Next steps (optional)
 - Replace sample images and product data with real assets
 - Persist cart server-side or integrate with a checkout provider
