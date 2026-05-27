@@ -1,43 +1,134 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>AI Landing Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Shop — Smart Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <meta name="description" content="AI Shop — curated products with personalized recommendations and fast delivery">
 </head>
 
 <body>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Smarter Shopping with AI</h1>
-    <p>Discover products tailored for you</p>
-    <button>Shop Now</button>
-    <img src="assets/hero.jpg" alt="Hero Image">
-  </section>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">AI<span>Shop</span></a>
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+        <button class="cart-btn" id="cart-btn" aria-label="Open cart">Cart <span id="cart-count">0</span></button>
+      </div>
+    </div>
+  </header>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="card">Fast Delivery</div>
-    <div class="card">AI Recommendations</div>
-    <div class="card">Best Prices</div>
-  </section>
+  <main>
+    <section class="hero container">
+      <div class="hero-content">
+        <h1>Smarter Shopping, Made Simple</h1>
+        <p class="lead">Discover curated products powered by AI recommendations — fast shipping, great prices.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">Shop New</a>
+          <a class="btn ghost" href="#features">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/hero.jpg" alt="Curated collection" loading="lazy">
+      </div>
+    </section>
 
-  <!-- Product Highlight -->
-  <section class="product">
-    <img src="assets/product.jpg" alt="">
-    <p>Featured Product Description</p>
-  </section>
+    <section id="features" class="features container">
+      <h2>Why AIShop?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">🤖</div>
+          <h3>AI Picks</h3>
+          <p>Personalized selections based on your tastes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Fast Delivery</h3>
+          <p>Reliable shipping and easy returns.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">💳</div>
+          <h3>Secure Checkout</h3>
+          <p>Safe payments with buyer protection.</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
-    <p>"Great experience!"</p>
-    <p>"Very useful product!"</p>
-  </section>
+    <section id="products" class="products container">
+      <h2>Featured Products</h2>
+      <div class="products-grid">
+        <article class="product-card" data-id="p1">
+          <img src="assets/product.jpg" alt="Product One" loading="lazy">
+          <h3>Product One</h3>
+          <p class="price">$49</p>
+          <button class="btn add-cart" data-id="p1" data-price="49">Add to cart</button>
+        </article>
+        <article class="product-card" data-id="p2">
+          <img src="assets/product.jpg" alt="Product Two" loading="lazy">
+          <h3>Product Two</h3>
+          <p class="price">$79</p>
+          <button class="btn add-cart" data-id="p2" data-price="79">Add to cart</button>
+        </article>
+        <article class="product-card" data-id="p3">
+          <img src="assets/product.jpg" alt="Product Three" loading="lazy">
+          <h3>Product Three</h3>
+          <p class="price">$99</p>
+          <button class="btn add-cart" data-id="p3" data-price="99">Add to cart</button>
+        </article>
+        <article class="product-card" data-id="p4">
+          <img src="assets/product.jpg" alt="Product Four" loading="lazy">
+          <h3>Product Four</h3>
+          <p class="price">$129</p>
+          <button class="btn add-cart" data-id="p4" data-price="129">Add to cart</button>
+        </article>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 AI Landing Page</p>
+    <section id="about" class="about container">
+      <div class="about-inner">
+        <h2>About AIShop</h2>
+        <p>AIShop uses modern recommendation engines to surface products you'll love. Built for performance and accessibility.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2026 AIShop</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
   </footer>
+
+  <!-- Mini cart drawer -->
+  <aside id="cart-drawer" class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button id="cart-close" class="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cart-items" class="cart-items">
+      <p class="empty">Your cart is empty</p>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">Total: <strong id="cart-total">$0</strong></div>
+      <div class="cart-actions">
+        <button id="checkout-btn" class="btn primary">Checkout</button>
+        <button id="clear-cart" class="btn ghost">Clear</button>
+      </div>
+    </div>
+  </aside>
 
   <script src="script.js"></script>
 </body>
