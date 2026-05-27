@@ -66,12 +66,3 @@ python3 -m http.server 8000
 ---
 
 If you want, I can: replace sample images, generate product JSON, or prepare a Shopify-compatible export. Tell me which and I'll implement it.
-
----
-
-## 🧩 Shopify Export
-This repo includes a small Shopify export under `shopify/` containing:
-- `sections/ai-shop.liquid` — a section you can add to your theme's `sections/` folder.
-- `snippets/product-card.liquid` — a minimal snippet to render products and provide an add-to-cart form.
-
-See `shopify/README_SHOPIFY.md` for installation notes.
